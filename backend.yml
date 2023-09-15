@@ -15,14 +15,16 @@
     - name: add application user
       ansible.builtin.user:
         name: expense
+
     - name: remove old content
       ansible.builtin.file:
        path: /app
        state: absent
+
     - name: create app directory
       ansible.builtin.file:
         path: /app
-        state: absent
+        state: directory
 
     - name: Download and extract backend data
       ansible.builtin.unarchive:
@@ -46,7 +48,7 @@
         name: backend
         state: started
         enabled: yes
-        daemon- reload: yes
+        daemon-reload: yes
 
 
 

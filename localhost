@@ -1,1 +1,1 @@
-frontend ansible_connection=local
+frontend.devopsa17.online ansible_connection=local

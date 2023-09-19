@@ -38,6 +38,7 @@
 - name: install mysql
   ansible.builtin.dnf:
     name: mysql
+
 - name: load schema
   ansible.builtin.shell: mysql -h mysql.devopsa17.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
 
